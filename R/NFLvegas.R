@@ -4,7 +4,7 @@
 #' This function allows you to extract Vegas lines from NFL matches.
 #' @param from The beginning year 
 #' @param to The end year
-#' @param obs Number of observations. Default value is "all", you could put numeric values instead. 
+#' @param obs Number of observations. Default value is "all", you could put numeric values instead
 #' @keywords nfl
 #' @export
 #' @examples
@@ -16,7 +16,7 @@ timestamp()
     
 outurl <- character(0)
 
-for (year in 2011:2014 ) {
+for (year in from:to ) {
 
     nfl_season <- html(paste0("http://www.pro-football-reference.com/years/",year,"/games.htm"))
     test1 <- nfl_season %>% 

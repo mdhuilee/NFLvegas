@@ -11,7 +11,7 @@ nfl_vegas(from = 2011, to = 2011, obs = "all")
 
 \item{to}{The end year}
 
-\item{obs}{Number of observations. Default value is "all", you could put numeric values instead.}
+\item{obs}{Number of observations. Default value is "all", you could put numeric values instead}
 }
 \description{
 This function allows you to extract Vegas lines from NFL matches.
