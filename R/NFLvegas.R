@@ -33,6 +33,8 @@ for (year in 2011:2014 ) {
     
 }
 
+row = length(outurl)
+
 if (obs != "all") {
 
 row = as.numeric(obs)
