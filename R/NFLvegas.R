@@ -21,9 +21,9 @@ for (year in from:to ) {
     nfl_season <- html(paste0("http://www.pro-football-reference.com/years/",year,"/games.htm"))
     test1 <- nfl_season %>% 
         html_nodes("#games a") %>%    
-            #use CSS selector '#games a' to select all tags including links in the                   table on the website
+            #use CSS selector '#games a' to select all tags including links in the table on the website
         html_attr("href")   
-            #to extract the value of attribute "href", which contains the links we                    need
+            #to extract the value of attribute "href", which contains the links we need
     
     test2 <- test1[substr(test1,2,4) == "box"]    
             #to select the link we need
