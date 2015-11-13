@@ -18,7 +18,7 @@ outurl <- character(0)
 
 for (year in from:to ) {
 
-    nfl_season <- html(paste0("http://www.pro-football-reference.com/years/",year,"/games.htm"))
+    nfl_season <- read_html(paste0("http://www.pro-football-reference.com/years/",year,"/games.htm"))
     test1 <- nfl_season %>% 
         html_nodes("#games a") %>%    
             #use CSS selector '#games a' to select all tags including links in the table on the website
@@ -44,7 +44,7 @@ out <- matrix(nrow = row, ncol = 5)
 
 for (i in 1:row ) {
     
-    nfltest <- html(outurl[i])
+    nfltest <- read_html(outurl[i])
     test <- nfltest %>% 
         html_nodes("#game_info td") %>%
         html_text() 
